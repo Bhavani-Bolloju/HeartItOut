@@ -5,7 +5,7 @@ const select_query = document.querySelector(".query");
 const accordion_container = document.querySelector(".accordion-container");
 
 const template = function ({ type, name, summary, link, id }) {
-  const html = `<div class="col text-center col-md-4 g-5">
+  const html = `<div class="col text-center g-5">
         <h5 class="card-title mb-4">${type}</h5>
             <div class="card col">
                 <div class="card-body">

@@ -138,12 +138,18 @@ form button {
 }
 .accordion {
   background-color: var(--bg-color--1);
-  /* padding: 30px 10px; */
+  padding: 30px 10px;
 }
 
 .accordion-container {
   padding: 30px;
   margin: auto;
+  width: 80%;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    padding: 10px;
+  }
 }
 
 .accordion-container > div {
@@ -158,9 +164,6 @@ form button {
 }
 .card-subtitle {
   color: var(--color-secondary) !important;
-}
-
-.card-text {
 }
 
 .card-footer {
@@ -196,6 +199,10 @@ form button {
 
 .carousel-indicators {
   top: 90%;
+
+  @media screen and (max-width: 500px) {
+    top: 95%;
+  }
 }
 
 .carousel-indicators button {
@@ -215,6 +222,13 @@ form button {
   min-height: 220px;
 }
 
+.carousel-inner {
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    padding: 10%;
+  }
+}
+
 h6 {
   text-align: center;
   font-size: 22px;
@@ -223,6 +237,10 @@ h6 {
 .carousel-control-prev,
 .carousel-control-next {
   width: 40%;
+
+  @media screen and (max-width: 700px) {
+    width: 10%;
+  }
 }
 
 .carousel-control-prev span,
