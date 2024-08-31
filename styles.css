@@ -1,0 +1,108 @@
+:root {
+  --color-primary: #455a64;
+  --color-secondary: #01818c;
+  --color-accent: #043953;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: var(--color-primary);
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+form p {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+form label {
+  text-transform: capitalize;
+}
+
+.form-check-input:checked + .form-check-label {
+  color: var(--color-secondary);
+}
+.dropdown {
+  width: 100%;
+}
+
+.dropdown button {
+  border: 1px solid var(--color-primary);
+  width: 100%;
+  text-align: start;
+  color: var(--color-secondary);
+}
+
+.dropdown button:hover {
+  border: 1px solid var(--color-primary);
+}
+
+.form-check {
+  margin-bottom: 10px;
+}
+
+form button {
+  align-self: center;
+}
+
+.btn-submit {
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: var(--color-secondary);
+  color: white;
+  width: 130px;
+  height: 50px;
+  letter-spacing: 1.2px;
+}
+
+.btn-submit:hover {
+  border: 2px solid var(--color-secondary);
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  height: 80px;
+}
+
+.navbar__logo {
+  width: 80px;
+  height: auto;
+}
+
+.navbar img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.main,
+footer {
+  width: 1152px;
+  margin: auto;
+  margin-top: 50px;
+}
