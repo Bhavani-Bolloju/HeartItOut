@@ -29,7 +29,11 @@ h2 {
   font-weight: 500;
   text-transform: uppercase;
   color: var(--color-secondary);
-  margin-bottom: 80px;
+}
+
+#section2 h2,
+#section1 h2 {
+  margin: 80px 0;
 }
 
 /*Nav bar*/
@@ -51,17 +55,20 @@ h2 {
   background-size: cover;
 }
 
-.main {
+/* .main {
   width: 1152px;
-}
+} */
 
-.main,
+/* .main,
 footer {
-  margin: auto;
   margin-top: 50px;
-}
+} */
 
 /*section 1 */
+#section1 {
+  width: 1152px;
+  margin: auto;
+}
 
 form {
   display: flex;
@@ -120,15 +127,23 @@ form button {
 }
 
 /*section 2*/
+
 .query {
   background-color: var(--bg-color--1);
   padding: 12px 20px;
   width: 50%;
   margin: auto;
 }
+.accordion {
+  background-color: var(--bg-color--1);
+  padding: 20px;
+}
 
 .accordion-container {
-  align-items: stretch;
+  padding: 30px 0;
+  gap: 30px;
+  width: 1152px;
+  margin: auto;
 }
 .accordion-container > div {
   display: flex;
@@ -166,6 +181,59 @@ form button {
 .card-footer--3 {
   background-color: var(--bg-color--4);
 }
+
+/*section 3*/
+
+#section3 {
+  background-color: var(--bg-color--1);
+  margin-top: 100px;
+  padding: 40px 0px;
+}
+
+.carousel {
+  padding: 40px;
+}
+
+.carousel-indicators {
+  top: 90%;
+}
+
+.carousel-indicators button {
+  background-color: var(--color-accent) !important;
+  width: 10px !important;
+  height: 10px !important;
+  border-radius: 50%;
+}
+
+.carousel-inner {
+  background-color: white;
+  padding: 30px;
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 2px 4px 10px 0px rgba(0, 0, 0, 0.1);
+  min-height: 220px;
+}
+
+h6 {
+  text-align: center;
+  font-size: 22px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 40%;
+}
+
+.carousel-control-prev span,
+.carousel-control-next span {
+  background-color: var(--color-accent);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+/*footer*/
 
 footer {
   background-color: var(--color-accent);

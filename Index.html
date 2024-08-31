@@ -25,9 +25,9 @@
         <img src="./HeartItOut.png" alt="logo" />
       </div>
     </nav>
-    <main class="container main">
+    <main class="main">
       <!-- section 1 -->
-      <section>
+      <section id="section1">
         <h2>section I</h2>
         <form>
           <div>
@@ -142,40 +142,23 @@
         </form>
       </section>
       <!-- section 2 -->
-      <section>
+      <section id="section2">
         <h2>section II</h2>
         <select class="form-select query" aria-label="Default select example">
           <option value="cars" selected>cars</option>
           <option value="books">books</option>
           <option value="music">music</option>
         </select>
-        <div class="row gx-5 mt-5 accordion-container">
-          <!-- <template id="card">
-            <div class="col text-center">
-              <h5 class="card-title mb-3">Card title</h5>
-              <div class="card">
-                <div class="card-body">
-                  <h6 class="card-subtitle mb-2 text-body-secondary">
-                    Card subtitle
-                  </h6>
-                  <p class="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                </div>
-
-                <a href="" class="card-footer">click</a>
-              </div>
-            </div>
-          </template> -->
+        <div class="accordion mt-5">
+          <div class="row accordion-container"></div>
         </div>
       </section>
       <!-- section 3 -->
-      <section class="my-5">
+      <section id="section3">
         <h2>section III</h2>
-        <div>
+        <div class="carousel">
           <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
+            <div class="carousel-indicators dots">
               <button
                 type="button"
                 data-bs-target="#carouselExampleIndicators"
@@ -205,7 +188,7 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <h6>Review 1</h6>
+                <h6 class="mb-4">Review 1</h6>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Delectus itaque sit tempore explicabo exercitationem mollitia
