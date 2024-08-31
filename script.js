@@ -4,20 +4,20 @@ const select_query = document.querySelector(".query");
 
 const accordion_container = document.querySelector(".accordion-container");
 
-const template = function ({ type, name, summary, link }) {
+const template = function ({ type, name, summary, link, id }) {
   const html = `<div class="col text-center">
-        <h5 class="card-title mb-3">${type}</h5>
-            <div class="card">
+        <h5 class="card-title mb-4">${type}</h5>
+            <div class="card col">
                 <div class="card-body">
-                    <h6 class="card-subtitle mb-2 text-body-secondary">
+                    <h6 class="card-subtitle mb-2 pt-3 text-body-secondary">
                       ${name}
                     </h6>
                     <p class="card-text">
                       ${summary}
                     </p>
                   </div>
-                  <a href="${link}" class="card-footer">click</a>
-              </div>
+                  <a href="${link}" class="card-footer card-footer--${id}">click</a>
+            </div>
     </div>`;
 
   accordion_container.insertAdjacentHTML("beforeend", html);
@@ -30,6 +30,8 @@ const fetchData = async function (query) {
       throw Error("Something went wrong, Please try again");
     }
     const res = await req.json();
+
+    console.log(res);
 
     const res_data = res.slice(0, 3).map((data) => ({
       id: data.show.id,
@@ -48,12 +50,13 @@ const fetchData = async function (query) {
 const init = async function (query) {
   const dataList = await fetchData(query);
   accordion_container.innerHTML = "";
-  dataList.map((data) =>
+  dataList.map((data, i) =>
     template({
       type: data.type,
       name: data.name,
       summary: data.summary,
-      link: data.link
+      link: data.link,
+      id: i + 1
     })
   );
 };

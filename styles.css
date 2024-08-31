@@ -2,6 +2,11 @@
   --color-primary: #455a64;
   --color-secondary: #01818c;
   --color-accent: #043953;
+
+  --bg-color--1: #f4fbff;
+  --bg-color--2: #2b7397;
+  --bg-color--3: #32959d;
+  --bg-color--4: #9c7777;
 }
 
 *,
@@ -24,7 +29,39 @@ h2 {
   font-weight: 500;
   text-transform: uppercase;
   color: var(--color-secondary);
+  margin-bottom: 80px;
 }
+
+/*Nav bar*/
+.navbar {
+  display: flex;
+  justify-content: center;
+  box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.2);
+  height: 80px;
+}
+
+.navbar__logo {
+  width: 80px;
+  height: auto;
+}
+
+.navbar img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.main {
+  width: 1152px;
+}
+
+.main,
+footer {
+  margin: auto;
+  margin-top: 50px;
+}
+
+/*section 1 */
 
 form {
   display: flex;
@@ -82,27 +119,69 @@ form button {
   border: 2px solid var(--color-secondary);
 }
 
-.navbar {
+/*section 2*/
+.query {
+  background-color: var(--bg-color--1);
+  padding: 12px 20px;
+  width: 50%;
+  margin: auto;
+}
+
+.accordion-container {
+  align-items: stretch;
+}
+.accordion-container > div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--color-secondary);
+}
+.card-subtitle {
+  color: var(--color-secondary) !important;
+}
+
+.card-text {
+}
+
+.card-footer {
+  text-decoration: none;
+  text-transform: capitalize;
+  padding: 18px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.card-footer--1 {
+  background-color: var(--bg-color--2);
+}
+.card-footer--2 {
+  background-color: var(--bg-color--3);
+}
+.card-footer--3 {
+  background-color: var(--bg-color--4);
+}
+
+footer {
+  background-color: var(--color-accent);
+  text-align: center;
   display: flex;
   justify-content: center;
-  box-shadow: 2px 4px 8px 0px rgba(0, 0, 0, 0.2);
-  height: 80px;
+  align-items: center;
+  height: 300px;
 }
 
-.navbar__logo {
-  width: 80px;
-  height: auto;
+.logo {
+  width: 200px;
 }
 
-.navbar img {
+footer img {
   width: 100%;
-  height: 100%;
-  background-size: cover;
-}
-
-.main,
-footer {
-  width: 1152px;
-  margin: auto;
-  margin-top: 50px;
+  height: auto;
+  object-fit: cover;
 }
