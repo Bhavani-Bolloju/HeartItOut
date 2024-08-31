@@ -24,7 +24,7 @@ const template = function ({ type, name, summary, link, id }) {
 };
 const fetchData = async function (query) {
   try {
-    const req = await fetch(`http://api.tvmaze.com/search/shows?q=${query}`);
+    const req = await fetch(`https://api.tvmaze.com/search/shows?q=${query}`);
 
     if (!req.ok) {
       throw Error("Something went wrong, Please try again");
@@ -33,7 +33,7 @@ const fetchData = async function (query) {
 
     console.log(res);
 
-    const res_data = res.slice(0, 3).map((data) => ({
+    const res_data = res?.slice(0, 3).map((data) => ({
       id: data.show.id,
       type: data.show.type,
       name: data.show.name,
@@ -50,7 +50,7 @@ const fetchData = async function (query) {
 const init = async function (query) {
   const dataList = await fetchData(query);
   accordion_container.innerHTML = "";
-  dataList.map((data, i) =>
+  dataList?.map((data, i) =>
     template({
       type: data.type,
       name: data.name,
