@@ -66,8 +66,10 @@ footer {
 
 /*section 1 */
 #section1 {
-  width: 1152px;
+  width: 80%;
   margin: auto;
+  /* width: 1152px;
+  margin: auto; */
 }
 
 form {
@@ -136,18 +138,16 @@ form button {
 }
 .accordion {
   background-color: var(--bg-color--1);
-  padding: 20px;
+  /* padding: 30px 10px; */
 }
 
 .accordion-container {
-  padding: 30px 0;
-  gap: 30px;
-  width: 1152px;
+  padding: 30px;
   margin: auto;
 }
+
 .accordion-container > div {
   display: flex;
-  flex: 1;
   flex-direction: column;
 }
 
